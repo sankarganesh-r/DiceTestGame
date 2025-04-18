@@ -6,18 +6,17 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public Image diceImage1;
-    public Image diceImage2;
-    public Sprite[] diceSprites;
-
     public TMP_Text resultText;
     public Button rollDiceButton;
+
+    public Dice dice1, dice2;
 
     // Start is called before the first frame update
     void Start()
     {
         rollDiceButton.onClick.RemoveAllListeners();
         rollDiceButton.onClick.AddListener(()=>{
+            
             RollDice();
             //resultText.text="Rolling";
         });
@@ -27,11 +26,13 @@ public class GameManager : MonoBehaviour
     void RollDice(){
 
         int die1= Random.Range(1,7);
+        dice1.AnimationTrigger(die1);
         int die2=Random.Range(1,7);
+        dice2.AnimationTrigger(die2);
         int total = die1+die2;
 
         Debug.Log("Total "+total);
-
+        
         if(total==1 || total == 7)
             resultText.text = "Your Total is "+total + "\nYou Win";
         else if(total==2 || total ==3 || total == 12)
@@ -39,12 +40,5 @@ public class GameManager : MonoBehaviour
         else 
             resultText.text = "Your Total is "+total + "\nRoll Again";
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        
     }
 }
