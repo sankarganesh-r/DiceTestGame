@@ -544,7 +544,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4279505169575887264, guid: af2dab2b7727cc14fa1bf83b8719a9c6, type: 3}
       propertyPath: m_Name
-      value: Dice (1)
+      value: Dice 2
       objectReference: {fileID: 0}
     - target: {fileID: 7358055113519121390, guid: af2dab2b7727cc14fa1bf83b8719a9c6, type: 3}
       propertyPath: animationTriggers.Array.size
@@ -1035,7 +1035,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4279505169575887264, guid: af2dab2b7727cc14fa1bf83b8719a9c6, type: 3}
       propertyPath: m_Name
-      value: Dice
+      value: Dice 1
       objectReference: {fileID: 0}
     - target: {fileID: 7358055113519121390, guid: af2dab2b7727cc14fa1bf83b8719a9c6, type: 3}
       propertyPath: animationTriggers.Array.size
